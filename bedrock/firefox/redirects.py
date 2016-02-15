@@ -291,7 +291,11 @@ redirectpatterns = (
              'https://support.mozilla.org/kb/about-tiles-new-tab'),
 
     # Bug 1239863
+    redirect(r'^firefox/os/1\.1/?$', 'firefox.os.index'),
+    redirect(r'^firefox/os/1\.3/?$', 'firefox.os.index'),
+    redirect(r'^firefox/os/1\.3t/?$', 'firefox.os.index'),
+    redirect(r'^firefox/os/2\.0/?$', 'firefox.os.index'),
+    redirect(r'^firefox/os/2\.5/?$', 'firefox.os.index'),
     redirect(r'^firefox/os/faq/?$',
              'https://support.mozilla.org/products/firefox-os'),
-
 )
