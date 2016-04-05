@@ -1,0 +1,38 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "../../sandstone/lib.less";
+
+body {
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+    text-shadow: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited,
+.link {
+    background: none;
+    border: none;
+    color: #f5c825;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.trailing-arrow {
+    .trailing-arrow();
+}

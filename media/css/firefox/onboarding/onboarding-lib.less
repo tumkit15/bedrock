@@ -1,0 +1,41 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+.buildstar(@size, @left, @top, @speed, @delay) {
+    .animation(twinkle @speed ease-in-out @delay infinite alternate-reverse);
+    background: #fff;
+    border-radius: 50%;
+    height: @size;
+    left: @left;
+    opacity: 0;
+    position: absolute;
+    top: @top;
+    width: @size;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        transform: scale(0.8) translate(-1px, -1px);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(0.7);
+        opacity: 0.7;
+    }
+    60% {
+        transform: scale(0.9);
+        opacity: 0.85;
+    }
+    80% {
+        transform: scale(0.7) translate(1px, 1px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
