@@ -587,6 +587,7 @@ def newsletter_subscribe(request):
                                     request.POST)
         errors = []
         if form.is_valid():
+            print 'form is valid!'
             data = form.cleaned_data
 
             kwargs = {'format': data['fmt']}
@@ -601,6 +602,7 @@ def newsletter_subscribe(request):
                 basket.subscribe(data['email'], data['newsletters'],
                                  **kwargs)
             except basket.BasketException as e:
+                print 'basket exception!'
                 if e.code == basket.errors.BASKET_INVALID_EMAIL:
                     errors.append(unicode(invalid_email_address))
                 else:
@@ -609,6 +611,7 @@ def newsletter_subscribe(request):
                     errors.append(unicode(general_error))
 
         else:
+            print 'form invalid!'
             if 'email' in form.errors:
                 errors.append(_('Please enter a valid email address'))
             if 'privacy' in form.errors:

@@ -396,6 +396,12 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/firefox_ios-bundle.css',
     },
+    'firefox_ios_test_flight': {
+        'source_filenames': (
+            'css/firefox/test-flight.less',
+        ),
+        'output_filename': 'css/firefox-ios-test-flight_bundle.css',
+    },
     'firefox_mobile_download': {
         'source_filenames': (
             'css/sandstone/sandstone-resp.less',
@@ -1337,6 +1343,12 @@ PIPELINE_JS = {
             'js/firefox/ios.js',
         ),
         'output_filename': 'js/firefox_ios-bundle.js',
+    },
+    'firefox_ios_test_flight': {
+        'source_filenames': (
+            'js/firefox/test-flight.js',
+        ),
+        'output_filename': 'js/firefox_ios_test_flight-bundle.js',
     },
     'firefox_tour_none': {
         'source_filenames': (
