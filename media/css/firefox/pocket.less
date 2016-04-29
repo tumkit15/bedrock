@@ -74,20 +74,14 @@
     .main-cta {
         margin: 30px 0;
 
-        .button-flat {
-            background: #005189;
-            text-transform: none;
+        .fx-privacy-link a {
+            color: @linkBlue;
 
             &:hover,
-            &:focus {
-                background: lighten(#005189, 3%);
+            &:focus,
+            &:active {
+                color: @linkBlueHover;
             }
-        }
-
-        .button-flat,
-        .button-flat-green {
-            .font-size(20px);
-            min-width: 200px;
         }
     }
 }

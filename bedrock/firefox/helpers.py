@@ -111,6 +111,7 @@ def download_firefox(ctx, channel='release', platform='all',
             Firefox and, if true, changes the button text from 'Free Download'
             to 'Update your Firefox'.
     :param alt_copy: Specifies alternate copy to use for download buttons.
+    :param button_color: color of download button. Default to 'green'.
     """
     show_desktop = platform in ['all', 'desktop']
     show_android = platform in ['all', 'android']
