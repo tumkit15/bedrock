@@ -8,7 +8,7 @@
 
 {% block page_title %}{{ _('Tweet to @StartMozilla and see how your technical skills can contribute') }}{% endblock %}
 
-{% block more_tasks %}{{ url('mozorg.contribute.signup') }}?v=2{% endblock %}
+{% block more_tasks %}{{ url('mozorg.contribute.signup') }}{% endblock %}
 
 {% block taskview_title %}{{ _('Tweet to @StartMozilla and see how your technical skills can contribute') }}{% endblock %}
 {% block taskview_lead %}{{ _('There are so many ways to get involved with Mozilla and support the browser. If you’re ready to fix your first bug, tweet @StartMozilla to get connected with the perfect starting bug for you.') }}{% endblock %}
@@ -38,8 +38,4 @@
 
 {% block thank_you_msg %}
   {{ _('Thanks for following') }}
-{% endblock %}
-
-{% block try_another %}
-  {{ url('mozorg.contribute.signup') }}?v=2
 {% endblock %}

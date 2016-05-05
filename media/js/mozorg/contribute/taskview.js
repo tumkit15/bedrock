@@ -137,22 +137,24 @@
     function followMozilla(event) {
         var $this = $(event.target);
         var intentURL = 'https://twitter.com/intent/';
-        var screenName = 'startmozilla';
+        var interactionMsg = '';
         var taskAction = $this.data('action');
-        var $tweetTxt;
+        var tweetTxt = '';
 
         event.preventDefault();
 
         if (taskAction === 'tweet') {
-            $tweetTxt = $('#tweet_txt').text();
-            intentURL += 'tweet?text=' + $tweetTxt + '&hashtags=QA1';
-            completeTwitterAction(intentURL, $this, 'tweeted to @startmozilla');
+            tweetTxt = $('#tweet_txt').text();
+            intentURL += 'tweet?text=' + tweetTxt + '&hashtags=QA1';
+            interactionMsg = 'tweeted to @startmozilla';
         }
 
         if (taskAction === 'follow') {
-            intentURL += 'follow/?screen_name=' + screenName;
-            completeTwitterAction(intentURL, $this, 'follow ' + screenName);
+            intentURL += 'follow/?screen_name=startmozilla';
+            interactionMsg = 'followed @startmozilla';
         }
+
+        completeTwitterAction(intentURL, $this, interactionMsg);
     }
 
     /**

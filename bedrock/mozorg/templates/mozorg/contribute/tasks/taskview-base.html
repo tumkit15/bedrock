@@ -34,7 +34,7 @@
       <header>
         <h3>{% block thank_you_msg %}{% endblock %}</h3>
       </header>
-      <p><a href="{% block try_another %}{{ url('mozorg.contribute.signup') }}{% endblock %}" class="try-another">{{ _('Try another task?') }}</a></p>
+      <p><a href="{{ url('mozorg.contribute.signup') }}" class="try-another">{{ _('Try another task?') }}</a></p>
     </section>
   {% endblock %}
 
