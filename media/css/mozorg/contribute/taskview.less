@@ -233,6 +233,29 @@ main {
         }
     }
 
+    /* tweet this text background styling */
+    .tweet-this {
+        position: relative;
+        background-color: #fff;
+        color: @textColorPrimary;
+        margin-bottom: 50px;
+        padding: 15px;
+        border-radius: 4px;
+        border-bottom-left-radius: 0;
+        .font-size(1.1rem);
+        max-width: 620px;
+
+        &:after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            content: '';
+            border-width: 30px 20px 0 0;
+            border-style: solid;
+            border-color: #fff transparent;
+        }
+    }
+
     .stumbler-button {
         display: block;
         margin: @baseLine auto 10px;
@@ -334,7 +357,7 @@ a[role="button"] {
     display: block;
     background-color: #0C99D5;
     color: #fff;
-    margin-top: @baseLine;
+    margin: @baseLine 0;
     padding: 15px;
     border: none;
     border-radius: 6px;
