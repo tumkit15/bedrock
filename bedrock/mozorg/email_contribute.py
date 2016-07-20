@@ -7,7 +7,7 @@ from collections import namedtuple
 from django.core.mail import EmailMessage
 
 import basket
-import jingo
+from django.template.loader import render_to_string
 from jinja2.exceptions import TemplateNotFound
 
 from lib.l10n_utils.dotlang import _lazy as _
@@ -169,7 +169,7 @@ def send(request, data):
 
     from_ = 'contribute@mozilla.org'
     subject = 'Inquiry about Mozilla %s' % functional_area.subject
-    msg = jingo.render_to_string(request, 'mozorg/emails/infos.txt', data)
+    msg = render_to_string('mozorg/emails/infos.txt', data, request=request)
     headers = {'Reply-To': data['email']}
 
     to = ['contribute@mozilla.org']
@@ -207,7 +207,7 @@ def autorespond(request, data):
         reply_to += functional_area.contacts
 
     try:
-        msg = jingo.render_to_string(request, template, data)
+        msg = render_to_string(template, data, request=request)
     except TemplateNotFound:
         # No template found means no auto-response
         return False

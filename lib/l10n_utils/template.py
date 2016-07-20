@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from jinja2.ext import Extension, InternationalizationExtension, nodes
 
-from lib.l10n_utils.helpers import gettext
+from lib.l10n_utils.templatetags.helpers import gettext
 from lib.l10n_utils.utils import strip_whitespace
 
 

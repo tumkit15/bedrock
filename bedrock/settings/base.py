@@ -421,7 +421,9 @@ TEMPLATES = [
         'OPTIONS': {
             'match_extension': None,
             'undefined': 'jinja2.Undefined',
+            'finalize': lambda x: x if x is not None else '',
             'translation_engine': 'lib.l10n_utils.template',
+            'newstyle_gettext': False,
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.debug',

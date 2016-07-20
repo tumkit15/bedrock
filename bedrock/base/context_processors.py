@@ -15,7 +15,6 @@ def i18n(request):
 
 
 def globals(request):
-    print 'ran the globals context processor'
     return {
         'request': request,
         'settings': settings,
