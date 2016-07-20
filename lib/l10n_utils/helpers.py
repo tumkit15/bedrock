@@ -10,9 +10,9 @@ from babel.numbers import format_number
 
 from django.conf import settings
 
-from dotlang import translate, lang_file_has_tag
+from lib.l10n_utils.dotlang import lang_file_has_tag, translate
+from lib.l10n_utils.gettext import template_has_tag
 from lib.l10n_utils.translation import get_language
-from gettext import template_has_tag
 
 
 babel_format_locale_map = {
@@ -63,7 +63,6 @@ def lang_files(ctx, *files):
 
 # backward compatible for imports
 _ = gettext
-jingo.get_env().install_gettext_callables(gettext, gettext)
 
 
 @jingo.register.filter
