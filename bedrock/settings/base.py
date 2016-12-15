@@ -396,6 +396,7 @@ INSTALLED_APPS = (
     # libs
     'django_extensions',
     'lib.l10n_utils',
+    'lib.sitemaps',
     'captcha',
     'rna',
 )
